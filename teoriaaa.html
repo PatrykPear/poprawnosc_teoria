@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Sprawdzanie poprawnosci imienia i nazwiska</title>
+</head>
+<body>
+
+	<h3>
+	
+	IMIĘ<br><input type= "text" id="imie"> 
+	<button onClick="sprawdz_imie()" > Sprawdź </button><br>
+	NAZWISKO<br><input type= "text" id="nazwisko">
+	<button onClick="sprawdz_nazwisko()" > Sprawdź </button>
+	
+	
+		<script>
+		
+		
+				
+				function sprawdz_imie()
+				{
+					var imie = document.getElementById("imie").value;
+					if (imie.match(/^[A-Z][a-z]+$/))
+					{
+						alert("Imię "+ imie +" jest poprawne");
+					}
+					else
+					{
+						alert("Imię "+ imie +" jest niepoprawne");
+					}
+
+				}
+				
+				function sprawdz_nazwisko()
+				{
+					var nazwisko = document.getElementById("nazwisko").value;
+					if (nazwisko.match(/^[A-Z][a-ząęółśżźćń-]+$/))
+					{
+						alert("Nazwisko "+ nazwisko + " jest poprawne");
+					}
+					else
+					{
+						alert("Nazwisko "+ nazwisko + " jest niepoprawne");
+					}
+
+				}
+				
+	
+	
+        
+		</script>
+	
+	
+
+</body>
+</html>
